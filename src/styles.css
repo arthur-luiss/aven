@@ -93,12 +93,25 @@
   --font-sans: "Space Grotesk", ui-sans-serif, sans-serif;
 }
 
-@utility text-gradient { background: var(--gradient-brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
-@utility bg-gradient-brand { background: var(--gradient-brand); }
-@utility shadow-glow { box-shadow: var(--shadow-glow); }
+@utility text-gradient {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@utility bg-gradient-brand {
+  background: var(--gradient-brand);
+}
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
 @utility glow-card {
-  transition: all .3s; 
-  &:hover { border-color: color-mix(in oklab, var(--violet) 60%, transparent); box-shadow: var(--shadow-glow); transform: translateY(-4px); }
+  transition: all 0.3s;
+  &:hover {
+    border-color: color-mix(in oklab, var(--violet) 60%, transparent);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-4px);
+  }
 }
 
 @layer base {
@@ -106,7 +119,9 @@
     border-color: var(--color-border);
   }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     font-family: var(--font-sans);
     background-color: var(--color-background);
