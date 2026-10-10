@@ -11,12 +11,12 @@ Site institucional one-page da Aven, empresa de criação de sites, landing page
 
 ## Como rodar
 
-    bun install
-    bun run dev
+    npm install
+    npm run dev
 
 ## Scripts
 
-- `bun run dev`: servidor de desenvolvimento
-- `bun run build`: build de produção
-- `bun run test`: testes
-- `bun run lint`: lint
+- `npm run dev`: servidor de desenvolvimento
+- `npm run build`: build de produção
+- `npm run test`: testes
+- `npm run lint`: lint
