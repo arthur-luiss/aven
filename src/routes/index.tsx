@@ -19,7 +19,7 @@ import logo from "@/assets/aven-logo-v2.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aven — Sites, Landing Pages e Otimizações" },
+      { title: "Aven" },
       {
         name: "description",
         content:
