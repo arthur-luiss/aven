@@ -138,7 +138,7 @@ function Index() {
             href={WHATSAPP}
             target="_blank"
             rel="noreferrer"
-            className={`${btnPrimary} hidden !py-2 text-sm md:inline-flex`}
+            className={`${btnPrimary} hidden py-2! text-sm md:inline-flex`}
           >
             Fazer Orçamento
           </a>
@@ -167,7 +167,7 @@ function Index() {
 
       <section className="relative flex min-h-screen items-center px-6 pt-16">
         <div className="pointer-events-none absolute -left-32 top-20 h-96 w-96 rounded-full bg-primary/40 blur-3xl" />
-        <div className="pointer-events-none absolute -right-20 bottom-10 h-[28rem] w-[28rem] rounded-full bg-violet/25 blur-3xl" />
+        <div className="pointer-events-none absolute -right-20 bottom-10 h-112 w-md rounded-full bg-violet/25 blur-3xl" />
         <div className="relative mx-auto max-w-4xl text-center">
           <span className="mb-6 inline-block rounded-full border border-border bg-card/60 px-4 py-1 text-xs uppercase tracking-widest text-violet">
             Tecnologia que converte
@@ -217,7 +217,7 @@ function Index() {
                 key={p.title}
                 className="glow-card overflow-hidden rounded-2xl border border-border bg-card"
               >
-                <div className={`relative h-48 bg-gradient-to-br ${p.grad}`}>
+                <div className={`relative h-48 bg-linear-to-br ${p.grad}`}>
                   <div className="absolute inset-6 rounded-lg border border-foreground/20 bg-background/30 p-4 backdrop-blur-sm">
                     <div className="mb-3 flex gap-1.5">
                       <span className="h-2 w-2 rounded-full bg-foreground/50" />
@@ -269,7 +269,7 @@ function Index() {
       </section>
 
       <footer id="contato" className="relative overflow-hidden px-6 pt-24">
-        <div className="pointer-events-none absolute left-1/2 top-10 h-80 w-[40rem] -translate-x-1/2 rounded-full bg-primary/30 blur-3xl" />
+        <div className="pointer-events-none absolute left-1/2 top-10 h-80 w-160 -translate-x-1/2 rounded-full bg-primary/30 blur-3xl" />
         <div className="relative mx-auto max-w-3xl rounded-3xl border border-border bg-card/80 p-10 text-center md:p-16">
           <h2 className="text-3xl font-bold md:text-5xl">
             Pronto para <span className="text-gradient">acelerar o seu negócio?</span>
