@@ -126,6 +126,10 @@ function Index() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/70 backdrop-blur-xl">
+        <meta
+          name="google-site-verification"
+          content="PG2XIiwAkwd5-l2IyJNHC0-gEMvI9kT0rikgHwkJplo"
+        />
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
           <a href="#" className="flex items-center gap-3">
             <img
