@@ -17,21 +17,33 @@ import {
 import logo from "@/assets/aven-logo-v2.png";
 
 export const Route = createFileRoute("/")({
+  const SITE_URL = "https://aven-sooty-ten.vercel.app";
+const TITLE = "Aven — Código de alta performance";
+const DESCRIPTION =
+  "Criação de sites, landing pages de alta conversão e ajustes técnicos com a melhor stack do mercado.";
+
+export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aven" },
-      {
-        name: "description",
-        content:
-          "Criação de sites, landing pages de alta conversão e ajustes técnicos com a melhor stack do mercado.",
-      },
-      { property: "og:title", content: "Aven — Código de alta performance" },
-      {
-        property: "og:description",
-        content: "Sites, landing pages e otimizações para acelerar o seu negócio.",
-      },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:site_name", content: "Aven" },
+      { property: "og:locale", content: "pt_BR" },
+      { property: "og:image", content: `${SITE_URL}/og-image.png` },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Aven — Código de alta performance" },
+      { name: "twitter:title", content: TITLE },
+      { name: "twitter:description", content: DESCRIPTION },
+      { name: "twitter:image", content: `${SITE_URL}/og-image.png` },
     ],
+    links: [{ rel: "canonical", href: SITE_URL }],
   }),
+  component: Index,
+});
   component: Index,
 });
 
