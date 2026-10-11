@@ -16,8 +16,7 @@ import {
 } from "lucide-react";
 import logo from "@/assets/aven-logo-v2.png";
 
-export const Route = createFileRoute("/")({
-  const SITE_URL = "https://aven-sooty-ten.vercel.app";
+const SITE_URL = "https://aven-sooty-ten.vercel.app";
 const TITLE = "Aven — Código de alta performance";
 const DESCRIPTION =
   "Criação de sites, landing pages de alta conversão e ajustes técnicos com a melhor stack do mercado.";
@@ -35,7 +34,10 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: `${SITE_URL}/og-image.png` },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Aven — Código de alta performance" },
+      {
+        property: "og:image:alt",
+        content: "Aven — Código de alta performance",
+      },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
       { name: "twitter:image", content: `${SITE_URL}/og-image.png` },
@@ -44,10 +46,8 @@ export const Route = createFileRoute("/")({
   }),
   component: Index,
 });
-  component: Index,
-});
 
-const WHATSAPP = "https://wa.me/5581983755704?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento";
+const WHATSAPP = "https://wa.me/5581983755704?text=...";
 const PHONE_DISPLAY = "(81) 9 8375-5704";
 const PHONE_TEL = "tel:+5581983755704";
 
