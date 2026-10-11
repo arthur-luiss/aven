@@ -47,7 +47,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WHATSAPP = "https://wa.me/5581983755704?text=...";
+const WHATSAPP =
+  "https://wa.me/5581983755704?text=Quero%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs!";
 const PHONE_DISPLAY = "(81) 9 8375-5704";
 const PHONE_TEL = "tel:+5581983755704";
 
