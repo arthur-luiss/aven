@@ -15,6 +15,10 @@ import {
   ExternalLink,
 } from "lucide-react";
 import logo from "@/assets/aven-logo-v2.png";
+import lojaImg from "@/assets/portfolio/loja-trama.webp";
+import nexorImg from "@/assets/portfolio/nexor.webp";
+import irepairImg from "@/assets/portfolio/irepair.webp";
+import entreVersosImg from "@/assets/portfolio/entre-versos.webp";
 
 const SITE_URL = "https://aven-sooty-ten.vercel.app";
 const TITLE = "Aven — Código de alta performance";
@@ -71,24 +75,40 @@ const services = [
 
 const projects = [
   {
-    title: "Landing Page SaaS",
-    tags: ["React", "Tailwind", "Vite"],
-    grad: "from-primary to-violet",
-  },
-  {
     title: "E-commerce Moda",
-    tags: ["Next.js", "Stripe", "SEO"],
-    grad: "from-violet to-primary-glow",
+    desc: "Modelo de loja virtual de moda feminina, masculina e infantil.",
+    tags: ["React", "Tailwind", "Vite"],
+    image: lojaImg,
+    alt: "Página inicial do modelo de loja virtual Trama",
+    url: "https://model-kappa-five.vercel.app/",
+    repo: "https://github.com/arthur-luiss/e-commerce-fast-model",
   },
   {
-    title: "Ajuste de Performance",
-    tags: ["Lighthouse 98", "Core Web Vitals"],
-    grad: "from-primary-glow to-secondary",
+    title: "Nexor",
+    desc: "Landing page responsiva para agência, com animações ao rolar a página.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    image: nexorImg,
+    alt: "Página inicial da landing page da agência Nexor",
+    url: "https://nexor-khaki.vercel.app/",
+    repo: "https://github.com/arthur-luiss/Nexor-landing-page",
   },
   {
-    title: "App Web Financeiro",
-    tags: ["TypeScript", "Node", "Charts"],
-    grad: "from-secondary to-primary",
+    title: "iRepair",
+    desc: "Landing page para assistência técnica de iPhone, com formulário de agendamento.",
+    tags: ["HTML", "Bootstrap", "JavaScript"],
+    image: irepairImg,
+    alt: "Página inicial da landing page de assistência técnica iRepair",
+    url: "https://iphones-swart.vercel.app/",
+    repo: "https://github.com/arthur-luiss/iphone-page",
+  },
+  {
+    title: "Entre Versos",
+    desc: "Plataforma para publicar e ler poemas, com painel administrativo.",
+    tags: ["React", "Node", "Supabase"],
+    image: entreVersosImg,
+    alt: "Página inicial da plataforma literária Entre Versos",
+    url: "https://entre-versos-web.vercel.app/",
+    repo: "https://github.com/arthur-luiss/entre-versos-web",
   },
 ];
 
@@ -226,26 +246,30 @@ function Index() {
 
       <section id="portfolio" className="bg-card/40 px-6 py-24">
         <div className="mx-auto max-w-6xl">
-          <SectionTitle kicker="Portfólio" title="Projetos recentes" />
+          <SectionTitle kicker="Portfólio" title="Projetos modelo" />
           <div className="grid gap-6 sm:grid-cols-2">
             {projects.map((p) => (
-              <div
+              <article
                 key={p.title}
                 className="glow-card overflow-hidden rounded-2xl border border-border bg-card"
               >
-                <div className={`relative h-48 bg-linear-to-br ${p.grad}`}>
-                  <div className="absolute inset-6 rounded-lg border border-foreground/20 bg-background/30 p-4 backdrop-blur-sm">
-                    <div className="mb-3 flex gap-1.5">
-                      <span className="h-2 w-2 rounded-full bg-foreground/50" />
-                      <span className="h-2 w-2 rounded-full bg-foreground/50" />
-                      <span className="h-2 w-2 rounded-full bg-foreground/50" />
-                    </div>
-                    <div className="mb-2 h-3 w-2/3 rounded bg-foreground/40" />
-                    <div className="h-3 w-1/2 rounded bg-foreground/25" />
-                  </div>
+                <div className="relative border-b border-border">
+                  <img
+                    src={p.image}
+                    alt={p.alt}
+                    width={1200}
+                    height={612}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-auto w-full"
+                  />
+                  <span className="absolute left-4 top-4 rounded-full border border-border bg-background/80 px-3 py-1 text-xs text-violet backdrop-blur">
+                    Projeto modelo
+                  </span>
                 </div>
                 <div className="p-6">
-                  <h3 className="mb-3 text-lg font-semibold">{p.title}</h3>
+                  <h3 className="mb-2 text-lg font-semibold">{p.title}</h3>
+                  <p className="mb-4 text-sm text-muted-foreground">{p.desc}</p>
                   <div className="mb-5 flex flex-wrap gap-2">
                     {p.tags.map((t) => (
                       <span
@@ -256,14 +280,26 @@ function Index() {
                       </span>
                     ))}
                   </div>
-                  <a
-                    href="#contato"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-violet hover:text-foreground"
-                  >
-                    Ver Demo <ExternalLink size={14} />
-                  </a>
+                  <div className="flex flex-wrap gap-5">
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-violet hover:text-foreground"
+                    >
+                      Ver Projeto <ExternalLink size={14} />
+                    </a>
+                    <a
+                      href={p.repo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-violet"
+                    >
+                      Código <Code2 size={14} />
+                    </a>
+                  </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
